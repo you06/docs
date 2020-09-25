@@ -1,13 +1,35 @@
-<!--Thanks for your contribution to TiDB documentation. See [CONTRIBUTING](https://github.com/pingcap/community/blob/master/CONTRIBUTING.md) before filing this PR.-->
+<!--Thanks for your contribution to TiDB documentation. Please answer the following questions.-->
 
-### What is changed, added or deleted? <!--Required-->
+### What is changed, added or deleted? (Required)
 
 <!--Tell us what you did and why.-->
 
-### What is the related PR or file link(s)? <!--Write "N/A" or remove this item if it is not applicable-->
+### Which TiDB version(s) do your changes apply to? (Required)
 
-<!--Provide a reference link that is related to your change. For example, a link in the pingcap/docs repository. -->
+<!-- You **must** choose the TiDB version(s) that your changes apply to. Fill in "x" in [] to tick the checkbox below.-->
 
-### Which version does your change affect? <!--Required; write "N/A" if it is not applicable-->
+- [ ] master (the latest development version)
+- [ ] v4.0 (TiDB 4.0 versions)
+- [ ] v3.1 (TiDB 3.1 versions)
+- [ ] v3.0 (TiDB 3.0 versions)
+- [ ] v2.1 (TiDB 2.1 versions)
 
-<!--Specify the version or versions that your change affect by adding a label at the right-hand side of this page. "dev" indicates the latest development version. "v3.0"/"v2.1" indicates the documentation of TiDB 3.0/2.1. If your change affects multiple versions, please update the documents for ALL the necessary versions.-->
+<!-- For contributors with **WRITE ACCESS** in this repo:
+If you select **two or more** versions from above, to trigger the bot to cherry-pick this PR to your desired release branch(es), you **must** add labels such as "needs-cherry-pick-4.0", "needs-cherry-pick-3.1", "needs-cherry-pick-3.0", or "needs-cherry-pick-2.1" on the right side of this PR page.-->
+
+### What is the related PR or file link(s)?
+
+<!--Give us some reference link(s) that might help quickly review and merge your PR.-->
+
+- This PR is translated from:
+- Other reference link(s):
+
+### Do your changes match any of the following descriptions?
+
+<!-- Provide as much information as possible so that reviewers can review your changes more efficiently.
+If you are not sure of the options, leave it as it is. -->
+
+- [ ] Delete files
+- [ ] Change aliases
+- [ ] Have version specific changes <!-- If yes, please add the label "version-specific-changes-required"-->
+- [ ] Might cause conflicts

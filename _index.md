@@ -1,50 +1,115 @@
 ---
 title: TiDB Introduction
-summary: Learn how to quickly start a TiDB cluster.
-category: introduction
+summary: Learn about the NewSQL database TiDB that supports HTAP workloads.
+aliases: ['/docs/dev/']
 ---
 
 # TiDB Introduction
 
-TiDB ("Ti" stands for Titanium) is an open-source NewSQL database that supports Hybrid Transactional and Analytical Processing (HTAP) workloads. It is MySQL compatible and features horizontal scalability, strong consistency, and high availability.
+[TiDB](https://github.com/pingcap/tidb) (/’taɪdiːbi:/, "Ti" stands for Titanium) is an open-source, distributed, NewSQL database that supports Hybrid Transactional and Analytical Processing (HTAP) workloads. It is MySQL compatible and features horizontal scalability, strong consistency, and high availability. TiDB can be deployed on-premise or in-cloud.
 
-TiDB can be deployed on-premise or in-cloud. The following deployment options are officially supported by PingCAP:
+Designed for the cloud, TiDB provides flexible scalability, reliability and security on the cloud platform. Users can elastically scale TiDB to meet the requirements of their changing workloads. [TiDB Operator](https://docs.pingcap.com/tidb-in-kubernetes/v1.1/tidb-operator-overview) helps manage TiDB on Kubernetes and automates operating tasks, which makes TiDB easier to deploy on any cloud that provides managed Kubernetes. [TiDB Cloud](https://pingcap.com/products/tidbcloud) (Beta), the fully-managed TiDB service, is the easiest, most economical, and most resilient way to unlock the full power of [TiDB in the cloud](https://docs.pingcap.com/tidbcloud/beta), allowing you to deploy and run TiDB clusters with just a few clicks.
 
-- [Ansible Deployment](/v3.0/how-to/deploy/orchestrated/ansible.md): This guide describes how to deploy TiDB using Ansible. It is strongly recommended for production deployment.
-- [Ansible Offline Deployment](/v3.0/how-to/deploy/orchestrated/offline-ansible.md): If your environment has no access to the internet, you can follow this guide to see how to deploy a TiDB cluster offline using Ansible.
-- [Docker Deployment](/v3.0/how-to/deploy/orchestrated/docker.md): This guide describes how to deploy TiDB using Docker.
-- Kubernetes Deployment:
+<NavColumns>
+<NavColumn>
+<ColumnTitle>About TiDB</ColumnTitle>
 
-    You can use [TiDB Operator](https://github.com/pingcap/tidb-operator) to deploy TiDB on:
+- [TiDB Introduction](/overview.md)
+- [Basic Features](/basic-features.md)
+- [What's New in TiDB 4.0](/whats-new-in-tidb-4.0.md)
+- [Compatibility with MySQL](/mysql-compatibility.md)
+- [Usage Limitations](/tidb-limitations.md)
+- [TiDB Adopters](/adopters.md)
+- [Credits](/credits.md)
 
-    - [AWS EKS (Elastic Kubernetes Service)](/v3.0/tidb-in-kubernetes/deploy/aws-eks.md)
-    - [GKE (Google Kubernetes Engine)](/v3.0/tidb-in-kubernetes/deploy/gcp-gke.md)
-    - [Google Cloud Shell](/v3.0/tidb-in-kubernetes/get-started/deploy-tidb-from-kubernetes-gke.md)
-    - [Alibaba Cloud ACK (Container Service for Kubernetes)](/v3.0/tidb-in-kubernetes/deploy/alibaba-cloud.md)
+</NavColumn>
 
-    Or deploy TiDB locally using:
+<NavColumn>
+<ColumnTitle>Quick Start</ColumnTitle>
 
-    - [DinD (Docker in Docker)](/v3.0/tidb-in-kubernetes/get-started/deploy-tidb-from-kubernetes-dind.md)
-    - [Minikube](/v3.0/tidb-in-kubernetes/get-started/deploy-tidb-from-kubernetes-minikube.md)
+- [Quick Start Guide](/quick-start-with-tidb.md)
+- [Explore SQL with TiDB](/basic-sql-operations.md)
 
-- [Binary Tarball Deployment](/v3.0/how-to/deploy/from-tarball/production-environment.md): This guide describes how to deploy TiDB from a binary tarball in production. Guides for [development](/v3.0/how-to/get-started/deploy-tidb-from-binary.md) and [testing](/v3.0/how-to/deploy/from-tarball/testing-environment.md) environments are also available.
+</NavColumn>
 
-## Community Provided Blog Posts & Tutorials
+<NavColumn>
+<ColumnTitle>Deploy and Use</ColumnTitle>
 
-The following list collects deployment guides and tutorials from the community. The content is subject to change by the contributors.
+- [Hardware and Software Requirements](/hardware-and-software-requirements.md)
+- [Check Environment and Configuration](/check-before-deployment.md)
+- [Deploy a TiDB Cluster Using TiUP](/production-deployment-using-tiup.md)
+- [Use TiFlash for Analytical Processing](/tiflash/tiflash-overview.md)
+- [Deploy TiDB in Kubernetes](https://docs.pingcap.com/tidb-in-kubernetes/stable)
 
-- [How To Spin Up an HTAP Database in 5 Minutes with TiDB + TiSpark](https://www.pingcap.com/blog/how_to_spin_up_an_htap_database_in_5_minutes_with_tidb_tispark/)
-- [Developer install guide (single machine)](http://www.tocker.ca/this-blog-now-powered-by-wordpress-tidb.html)
-- [TiDB Best Practices](https://pingcap.com/blog/2017-07-24-tidbbestpractice/)
+</NavColumn>
 
-_Your contribution is also welcome! Feel free to open a [pull request](https://github.com/pingcap/docs/blob/master/dev/overview.md) to add additional links._
+<NavColumn>
+<ColumnTitle>Migrate Data</ColumnTitle>
 
-## Source Code
+- [Migration Overview](/migration-overview.md)
+- [Migrate from MySQL SQL Files](/migrate-from-mysql-mydumper-files.md)
+- [Migrate from Aurora MySQL Database](/migrate-from-aurora-mysql-database.md)
+- [Migrate from CSV Files](/tidb-lightning/migrate-from-csv-using-tidb-lightning.md)
 
-Source code for [all components of the TiDB platform](https://github.com/pingcap) is available on GitHub.
+</NavColumn>
 
-- [TiDB](https://github.com/pingcap/tidb)
-- [TiKV](https://github.com/tikv/tikv)
-- [PD](https://github.com/pingcap/pd)
-- [TiSpark](https://github.com/pingcap/tispark)
-- [TiDB Operator](https://github.com/pingcap/tidb-operator)
+<NavColumn>
+<ColumnTitle>Maintain</ColumnTitle>
+
+- [Upgrade TiDB Using TiUP](/upgrade-tidb-using-tiup.md)
+- [Scale TiDB Using TiUP](/scale-tidb-using-tiup.md)
+- [Back up and Restore Data](/br/backup-and-restore-tool.md)
+- [Deploy and Manage TiCDC](/ticdc/manage-ticdc.md)
+- [Maintain TiDB Using TiUP](/maintain-tidb-using-tiup.md)
+- [Maintain TiFlash](/tiflash/maintain-tiflash.md)
+
+</NavColumn>
+
+<NavColumn>
+<ColumnTitle>Monitor and Alert</ColumnTitle>
+
+- [Monitoring Framework](/tidb-monitoring-framework.md)
+- [Monitoring API](/tidb-monitoring-api.md)
+- [Deploy Monitoring Services](/deploy-monitoring-services.md)
+- [Alert Rules and Solutions](/alert-rules.md)
+- [TiFlash Alert Rules and Solutions](/tiflash/tiflash-alert-rules.md)
+
+</NavColumn>
+
+<NavColumn>
+<ColumnTitle>Troubleshoot</ColumnTitle>
+
+- [TiDB Troubleshooting Map](/tidb-troubleshooting-map.md)
+- [Identify Slow Queries](/identify-slow-queries.md)
+- [SQL Diagnostics](/information-schema/information-schema-sql-diagnostics.md)
+- [Troubleshoot Hotspot Issues](/troubleshoot-hot-spot-issues.md)
+- [Troubleshoot the TiDB Cluster](/troubleshoot-tidb-cluster.md)
+- [Troubleshoot TiCDC](/ticdc/troubleshoot-ticdc.md)
+- [Troubleshoot TiFlash](/tiflash/troubleshoot-tiflash.md)
+
+</NavColumn>
+
+<NavColumn>
+<ColumnTitle>Reference</ColumnTitle>
+
+- [TiDB Architecture](/tidb-architecture.md)
+- [Key Monitoring Metrics](/grafana-overview-dashboard.md)
+- [Enable TLS](/enable-tls-between-clients-and-servers.md)
+- [Privilege Management](/privilege-management.md)
+- [Role-Based Access Control](/role-based-access-control.md)
+- [Certificate-Based Authentication](/certificate-authentication.md)
+
+</NavColumn>
+
+<NavColumn>
+<ColumnTitle>FAQs</ColumnTitle>
+
+- [Product FAQs](/faq/tidb-faq.md)
+- [High Availability FAQs](/faq/high-availability-faq.md)
+- [SQL FAQs](/faq/sql-faq.md)
+- [Deploy and Maintain FAQs](/faq/deploy-and-maintain-faq.md)
+- [Upgrade and After Upgrade FAQs](/faq/upgrade-faq.md)
+- [Migration FAQs](/faq/migration-tidb-faq.md)
+
+</NavColumn>
+</NavColumns>
